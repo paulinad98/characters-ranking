@@ -11,9 +11,18 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <video ref="video" width="320" height="240" autoplay></video>
-    <button @click="startRecord()">Start</button>
-    <button @click="stopRecord()">Stop</button>
+  <div class="video-wrapper">
+    <video class="video" ref="video" autoplay></video>
+    <slot :startRecord="startRecord" :stopRecord="stopRecord" />
   </div>
 </template>
+
+<style scoped>
+.video-wrapper {
+  position: relative;
+}
+.video {
+  width: 100%;
+  height: 100%;
+}
+</style>
