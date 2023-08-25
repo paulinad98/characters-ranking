@@ -13,7 +13,7 @@ onMounted(() => {
 <template>
   <div class="video-wrapper">
     <video class="video" ref="video" autoplay></video>
-    <slot :startRecord="startRecord" :stopRecord="stopRecord" />
+    <slot v-bind="{ startRecord, stopRecord }" />
   </div>
 </template>
 

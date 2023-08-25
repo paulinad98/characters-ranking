@@ -1,10 +1,14 @@
 import { ref } from 'vue'
-import { downloadUrl } from '../helpers/downloadUrl'
 
 export function useVideoRecord() {
   const cameraStream = ref<MediaStream | null>(null)
   const mediaRecorder = ref<MediaRecorder | null>(null)
   const chunks = ref<Blob[]>([])
+
+  function resetRecord() {
+    chunks.value = []
+    mediaRecorder.value = null
+  }
 
   async function setCameraStream(video: HTMLVideoElement) {
     cameraStream.value = await navigator.mediaDevices.getUserMedia({
@@ -27,14 +31,6 @@ export function useVideoRecord() {
       chunks.value.push(e.data)
     }
 
-    mediaRecorder.value.onstop = () => {
-      const videoFile = new Blob(chunks.value, { type: 'video/webm' })
-      downloadUrl(videoFile)
-
-      chunks.value = []
-      mediaRecorder.value = null
-    }
-
     mediaRecorder.value.start(1000)
   }
 
@@ -44,6 +40,10 @@ export function useVideoRecord() {
     }
 
     mediaRecorder.value.stop()
+    const videoFile = new Blob(chunks.value, { type: 'video/webm' })
+    resetRecord()
+
+    return videoFile
   }
 
   return { setCameraStream, startRecord, stopRecord }
