@@ -8,12 +8,17 @@ const video = ref<HTMLVideoElement | null>(null)
 onMounted(() => {
   setCameraStream(video.value)
 })
+
+defineExpose({
+  startRecord,
+  stopRecord
+})
 </script>
 
 <template>
   <div class="video-wrapper">
     <video class="video" ref="video" autoplay></video>
-    <slot v-bind="{ startRecord, stopRecord }" />
+    <slot />
   </div>
 </template>
 

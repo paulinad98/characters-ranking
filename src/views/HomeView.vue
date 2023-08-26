@@ -1,18 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import CameraStream from '../components/CameraStream.vue'
 import AppButton from '../components/AppButton.vue'
 
-function handleStart(startRecord, stopRecord) {}
+const cameraStream = ref<InstanceType<typeof CameraStream> | null>(null)
+
+function handleStart() {
+  console.log(cameraStream.value.startRecord)
+}
 </script>
 
 <template>
-  <CameraStream v-slot="{ startRecord, stopRecord }">
-    <AppButton
-      @click="handleStart(startRecord, stopRecord)"
-      color="raspberry-rose"
-      class="start-btn"
-      >Start</AppButton
-    >
+  <CameraStream ref="cameraStream">
+    <AppButton @click="handleStart()" color="raspberry-rose" class="start-btn">Start</AppButton>
   </CameraStream>
 </template>
 
