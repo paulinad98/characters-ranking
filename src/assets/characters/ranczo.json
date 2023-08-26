@@ -1,0 +1,29 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Lucy Wilska",
+      "img": "http://przykladowy-link.pl/lucy.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Wojciech Wójt",
+      "img": "http://przykladowy-link.pl/wojciech.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pawel Kozioł",
+      "img": "http://przykladowy-link.pl/pawel.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Kusy",
+      "img": "http://przykladowy-link.pl/kusy.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Dylan",
+      "img": "http://przykladowy-link.pl/dylan.jpg"
+    }
+  ]
+}
