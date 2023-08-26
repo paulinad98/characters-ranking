@@ -20,9 +20,14 @@ onMounted(() => {
 <style scoped>
 .video-wrapper {
   position: relative;
+  height: 100vh;
+  background-color: rgb(var(--black-soft-rgb));
 }
 .video {
   width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 </style>
