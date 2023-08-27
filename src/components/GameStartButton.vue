@@ -3,7 +3,9 @@ import { inject } from 'vue'
 import AppButton from '../components/AppButton.vue'
 import { CameraStreamSymbol } from '@/symbols'
 
-const emit = defineEmits(['start'])
+const emit = defineEmits<{
+  (e: 'start'): void
+}>()
 const cameraStreamApi = inject(CameraStreamSymbol)
 
 function startGame() {

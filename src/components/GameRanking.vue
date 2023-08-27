@@ -4,13 +4,23 @@ import { Character } from '@/types/types'
 defineProps<{
   charactersRanking: (Character | null)[]
 }>()
+
+const emit = defineEmits<{
+  (e: 'select', characterRankingIndex: number): void
+}>()
+
+function selectCharacter(characterRankingIndex: number, character: Character | null) {
+  if (character) return
+
+  emit('select', characterRankingIndex)
+}
 </script>
 
 <template>
   <ol class="game-ranking">
     <li :key="i" v-for="(character, i) in charactersRanking" class="ranking-wrapper">
       <span class="ranking-place">{{ i + 1 }}</span>
-      <button @click="$emit('select', i)" class="ranking-btn" :disabled="!!character">
+      <button @click="selectCharacter(i, character)" class="ranking-btn" :disabled="!!character">
         <img
           v-if="!!character"
           :src="character.img"
@@ -53,8 +63,13 @@ defineProps<{
   transition: 0.2s;
 }
 
-.ranking-btn:hover {
+.ranking-btn:hover:not(:disabled) {
   border: 2px solid var(--ranking-theme);
+}
+
+.ranking-btn:disabled {
+  border: none;
+  cursor: unset;
 }
 
 .ranking-character-img {
