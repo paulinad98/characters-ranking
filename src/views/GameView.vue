@@ -11,6 +11,7 @@ const gameRounds = 10
 const characters: Character[] = charactersData.ranczo
 const charactersRanking = ref<(Character | null)[]>(new Array(gameRounds).fill(null))
 const actualCharacter = ref<Character | null>(null)
+const isGameStarted = ref(false)
 
 const charactersToDraw = computed(() => {
   const selectedCharactersId = charactersRanking.value
@@ -24,8 +25,19 @@ const charactersToDraw = computed(() => {
   return charactersToDraw
 })
 
+function startGame() {
+  isGameStarted.value = true
+  drawCharacter()
+}
+
 function selectCharacterPlace(characterRankingIndex: number) {
   charactersRanking.value[characterRankingIndex] = actualCharacter.value
+
+  if (charactersRanking.value.every((character) => !!character)) {
+    endGame()
+    return
+  }
+
   drawCharacter()
 }
 
@@ -33,14 +45,20 @@ function drawCharacter() {
   const randomCharacterIndex = Math.floor(Math.random() * charactersToDraw.value.length)
   actualCharacter.value = charactersToDraw.value[randomCharacterIndex]
 }
+
+function endGame() {}
 </script>
 
 <template>
   <CameraStream>
-    <GameStartButton @start="drawCharacter()" />
-    <GameRanking @select="selectCharacterPlace($event)" v-bind="{ charactersRanking }" />
+    <GameStartButton v-if="!isGameStarted" @start="startGame()" />
+    <GameRanking
+      v-if="isGameStarted"
+      @select="selectCharacterPlace($event)"
+      v-bind="{ charactersRanking }"
+    />
     <GameDrawnCharacter
-      v-if="actualCharacter"
+      v-if="actualCharacter && isGameStarted"
       v-bind="{ drawnCharacter: actualCharacter, characters }"
     />
   </CameraStream>
