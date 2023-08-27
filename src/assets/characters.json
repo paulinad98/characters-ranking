@@ -1,0 +1,169 @@
+{
+  "ranczo": [
+    {
+      "id": 1,
+      "name": "Wójt Paweł Kozioł",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/5/58/15810_1.jpg/revision/latest/scale-to-width-down/750?cb=20130921144109"
+    },
+    {
+      "id": 2,
+      "name": "Ksiądz Piotr Kozioł",
+      "img": "https://ocdn.eu/images/pulscms/MjQ7MDA_/cce152fe9618eac61199ea970f7018d5.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Kusy",
+      "img": "https://s3.party.pl/newsy/pawel-krolikowski-jako-kusy-w-ranczu-535961-1_X.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Lucy Wilska",
+      "img": "https://s3.party.pl/newsy/serial-ranczo-wraca-510145-4_3.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Patryk Pietrek",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/9/9f/62-12.jpg/revision/latest?cb=20140107142757"
+    },
+    {
+      "id": 6,
+      "name": "Tadeusz Hadziuk",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/a/a8/S9-20.jpg/revision/latest?cb=20140809122618"
+    },
+    {
+      "id": 7,
+      "name": "Michałowa",
+      "img": "https://i.wpimg.pl/1200x/filerepo.grupawp.pl/api/v1/display/embed/83304bca-9031-481e-bbc9-64353a3be087"
+    },
+    {
+      "id": 8,
+      "name": "Maciej Solejuk",
+      "img": "https://i.iplsc.com/sylwester-maciejewski-na-planie-serialu-ranczo/000ER1YSYE1XMCWH-C122-F4.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Halina Kozioł",
+      "img": "https://i.iplsc.com/viola-arlak-jako-halina-koziol-ranczo/000FEE38I68PT2T1-C122-F4.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Stacho Japycz",
+      "img": "https://s3.party.pl/newsy/franciszek-pieczka-jako-stach-japycz-w-serialu-ranczo-555021-16_9.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Arkadiusz Czerepach",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/8/80/Uid_da07a774fb09b130f3a6d23ff03f25ec1299704648981_width_633_play_0_pos_3_gs_0.jpg/revision/latest/scale-to-width-down/600?cb=20130922174648"
+    },
+    {
+      "id": 12,
+      "name": "Kazimiera Solejukowa",
+      "img": "https://d-art.ppstatic.pl/kadry/k/r/1/01/76/642ec3a6abd2b_o_large.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Wioletka Kotecka",
+      "img": "https://bi.im-g.pl/im/b2/fb/1b/z29343666Q,Magdalena-Waligorska-Lisiecka.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Klaudia Kozioł",
+      "img": "https://bi.im-g.pl/im/58/0a/1b/z28352600AMP,Pamietacie-Klaudie-Koziol-z-serialu--Ranczo---Tera.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Leokadia Czerepach",
+      "img": "https://bi.im-g.pl/im/dd/11/1b/z28382941IER,Magdalena-Kuta.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Krystyna Więcławska",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/6/65/254165465465.png/revision/latest/scale-to-width-down/1324?cb=20110122205314"
+    },
+    {
+      "id": 17,
+      "name": "Fabian Duda",
+      "img": "https://wmeritum.pl/wp-content/uploads/2023/02/Duda.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Andrzej Więcławski",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/9/9a/Andrzej_Wi%C4%99c%C5%82awski00.png/revision/latest?cb=20140704150912"
+    },
+    {
+      "id": 19,
+      "name": "Stasiek Kotecki",
+      "img": "https://fwcdn.pl/fph/56/97/855697/994157.3.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Mieczysław Wezół",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/5/53/59-5.jpg/revision/latest?cb=20140107070801"
+    },
+    {
+      "id": 21,
+      "name": "Celina Hadziukowa",
+      "img": "https://bi.im-g.pl/im/9e/27/1b/z28471454V,Dorota-Nowakowska.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Tomasz Witebski",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/8/80/Nowy_Witebski.jpg/revision/latest?cb=20150221203722"
+    },
+    {
+      "id": 23,
+      "name": "Kinga",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/e/e8/Agnieszka_Pawe%C5%82kiewicz.png/revision/latest/scale-to-width-down/340?cb=20151211000424"
+    },
+    {
+      "id": 24,
+      "name": "Wiesława Oleś",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/8/87/326565_6.png/revision/latest/scale-to-width-down/960?cb=20110123233356"
+    },
+    {
+      "id": 25,
+      "name": "Ksiądz Wikary Robert",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/5/5e/Wikary.png/revision/latest?cb=20110122135242"
+    },
+    {
+      "id": 26,
+      "name": "Ksiądz Maciej",
+      "img": "https://bi.im-g.pl/im/80/33/1b/z28520576Q,Ks--Maciej----Ranczo-.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Jola Pietrek",
+      "img": "https://i.ytimg.com/vi/4bJ5c7M_Bl0/mqdefault.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Dorotka",
+      "img": "https://fwcdn.pl/ppo/86/79/1598679/327328.1.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Zofia Steć",
+      "img": "https://images.iberion.media/images/origin/Grazyna_Zielinska_Ranczo_11fba23ef3.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Dorota Wezółowa",
+      "img": "https://bi.im-g.pl/im/70/2c/1b/z28492656AMP,Beata-Olga-Kowalska.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Francesca Andreoni",
+      "img": "https://images.iberion.media/images/1920/Ranczo_10_471d0faa68.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Ryszard Polakowski",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/7/7c/Ryszardpolakowski.jpg/revision/latest?cb=20110420113557"
+    },
+    {
+      "id": 33,
+      "name": "Jan Japycz",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/0/03/Jan_Japycz1.jpg/revision/latest?cb=20090313193117"
+    }
+  ]
+}

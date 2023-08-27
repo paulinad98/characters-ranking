@@ -4,10 +4,10 @@ import { Character } from '@/types/types'
 import CameraStream from '@/components/CameraStream.vue'
 import GameRanking from '@/components/GameRanking.vue'
 import GameStartButton from '@/components/GameStartButton.vue'
-import charactersData from '@/assets/characters/ranczo'
+import charactersData from '@/assets/characters.json'
 
 const gameRounds = 10
-const characters: Character[] = charactersData.characters
+const characters: Character[] = charactersData.ranczo
 const charactersRanking = ref<(Character | null)[]>(new Array(gameRounds).fill(null))
 const actualCharacter = ref<Character | null>(null)
 
