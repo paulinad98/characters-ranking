@@ -5,3 +5,8 @@ export type Character = {
   img: string
   name: string
 }
+
+export type CameraStreamApi = {
+  startRecord: () => void
+  stopRecord: () => Blob
+}

@@ -1,19 +1,26 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, provide } from 'vue'
 import { useVideoRecord } from '../composables/useVideoRecord'
+import { CameraStreamSymbol } from '@/symbols'
 
 const { setCameraStream, startRecord, stopRecord } = useVideoRecord()
 const video = ref<HTMLVideoElement | null>(null)
 
 onMounted(() => {
+  if (!video.value) return
   setCameraStream(video.value)
+})
+
+provide(CameraStreamSymbol, {
+  startRecord,
+  stopRecord
 })
 </script>
 
 <template>
   <div class="video-wrapper">
     <video class="video" ref="video" autoplay></video>
-    <slot v-bind="{ startRecord, stopRecord }" />
+    <slot />
   </div>
 </template>
 
