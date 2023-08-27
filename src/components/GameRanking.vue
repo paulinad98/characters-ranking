@@ -38,12 +38,11 @@ function selectCharacter(characterRankingIndex: number, character: Character | n
 
   position: absolute;
   top: 0;
-  left: 8%;
+  left: 2%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 12px;
+  justify-content: space-evenly;
 }
 
 .ranking-wrapper {
@@ -53,8 +52,8 @@ function selectCharacter(characterRankingIndex: number, character: Character | n
 }
 
 .ranking-btn {
-  width: 80px;
-  height: 45px;
+  width: 95px;
+  height: 55px;
   overflow: hidden;
   border-radius: 12px;
   background-color: rgb(var(--white-mute-rgb));
