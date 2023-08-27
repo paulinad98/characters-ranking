@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
+import { loadImage } from '@/helpers/loadImage'
+import charactersData from '@/assets/characters.json'
 
 interface CustomImportMeta extends ImportMeta {
   env: any
@@ -16,7 +18,11 @@ const router = createRouter({
     {
       path: '/game',
       name: 'game',
-      component: () => import('@/views/GameView.vue')
+      component: () => import('@/views/GameView.vue'),
+      beforeEnter() {
+        const imagesArray = charactersData.ranczo.map((character) => character.img)
+        loadImage(imagesArray)
+      }
     }
   ]
 })

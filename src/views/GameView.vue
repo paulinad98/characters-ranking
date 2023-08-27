@@ -4,6 +4,7 @@ import { Character } from '@/types/types'
 import CameraStream from '@/components/CameraStream.vue'
 import GameRanking from '@/components/GameRanking.vue'
 import GameStartButton from '@/components/GameStartButton.vue'
+import GameDrawnCharacter from '@/components/GameDrawnCharacter.vue'
 import charactersData from '@/assets/characters.json'
 
 const gameRounds = 10
@@ -38,6 +39,10 @@ function drawCharacter() {
   <CameraStream>
     <GameStartButton @start="drawCharacter()" />
     <GameRanking @select="selectCharacterPlace($event)" v-bind="{ charactersRanking }" />
+    <GameDrawnCharacter
+      v-if="actualCharacter"
+      v-bind="{ drawnCharacter: actualCharacter, characters }"
+    />
   </CameraStream>
 </template>
 
