@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Wójt Paweł Kozioł",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/5/58/15810_1.jpg/revision/latest/scale-to-width-down/750?cb=20130921144109"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/5/58/15810_1.jpg"
     },
     {
       "id": 2,
@@ -53,7 +53,7 @@
     {
       "id": 11,
       "name": "Arkadiusz Czerepach",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/8/80/Uid_da07a774fb09b130f3a6d23ff03f25ec1299704648981_width_633_play_0_pos_3_gs_0.jpg/revision/latest/scale-to-width-down/600?cb=20130922174648"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/8/80/Uid_da07a774fb09b130f3a6d23ff03f25ec1299704648981_width_633_play_0_pos_3_gs_0.jpg"
     },
     {
       "id": 12,
@@ -78,7 +78,7 @@
     {
       "id": 16,
       "name": "Krystyna Więcławska",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/6/65/254165465465.png/revision/latest/scale-to-width-down/1324?cb=20110122205314"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/6/65/254165465465.png"
     },
     {
       "id": 17,
@@ -88,7 +88,7 @@
     {
       "id": 18,
       "name": "Andrzej Więcławski",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/9/9a/Andrzej_Wi%C4%99c%C5%82awski00.png/revision/latest?cb=20140704150912"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/9/9a/Andrzej_Wi%C4%99c%C5%82awski00.png"
     },
     {
       "id": 19,
@@ -98,7 +98,7 @@
     {
       "id": 20,
       "name": "Mieczysław Wezół",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/5/53/59-5.jpg/revision/latest?cb=20140107070801"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/5/53/59-5.jpg"
     },
     {
       "id": 21,
@@ -108,22 +108,22 @@
     {
       "id": 22,
       "name": "Tomasz Witebski",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/8/80/Nowy_Witebski.jpg/revision/latest?cb=20150221203722"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/8/80/Nowy_Witebski.jpg"
     },
     {
       "id": 23,
       "name": "Kinga",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/e/e8/Agnieszka_Pawe%C5%82kiewicz.png/revision/latest/scale-to-width-down/340?cb=20151211000424"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/e/e8/Agnieszka_Pawe%C5%82kiewicz.png"
     },
     {
       "id": 24,
       "name": "Wiesława Oleś",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/8/87/326565_6.png/revision/latest/scale-to-width-down/960?cb=20110123233356"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/8/87/326565_6.png"
     },
     {
       "id": 25,
       "name": "Ksiądz Wikary Robert",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/5/5e/Wikary.png/revision/latest?cb=20110122135242"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/5/5e/Wikary.png"
     },
     {
       "id": 26,
@@ -158,12 +158,12 @@
     {
       "id": 32,
       "name": "Ryszard Polakowski",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/7/7c/Ryszardpolakowski.jpg/revision/latest?cb=20110420113557"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/7/7c/Ryszardpolakowski.jpg"
     },
     {
       "id": 33,
       "name": "Jan Japycz",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/0/03/Jan_Japycz1.jpg/revision/latest?cb=20090313193117"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/0/03/Jan_Japycz1.jpg"
     }
   ]
 }
