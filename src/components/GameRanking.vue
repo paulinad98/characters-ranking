@@ -3,6 +3,7 @@ import { Character } from '@/types/types'
 
 defineProps<{
   charactersRanking: (Character | null)[]
+  isCharactersSelectable: boolean
 }>()
 
 const emit = defineEmits<{
@@ -20,7 +21,11 @@ function selectCharacter(characterRankingIndex: number, character: Character | n
   <ol class="game-ranking">
     <li :key="i" v-for="(character, i) in charactersRanking" class="ranking-wrapper">
       <span class="ranking-place">{{ i + 1 }}</span>
-      <button @click="selectCharacter(i, character)" class="ranking-btn" :disabled="!!character">
+      <button
+        @click="selectCharacter(i, character)"
+        class="ranking-btn"
+        :disabled="!!character || !isCharactersSelectable"
+      >
         <img
           v-if="!!character"
           :src="character.img"

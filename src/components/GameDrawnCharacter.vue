@@ -9,6 +9,11 @@ const DRAWING_STEPS_COUNT = 4
 const props = defineProps<{
   actualCharacter: Character
   characters: Character[]
+  modelValue: boolean
+}>()
+
+const emit = defineEmits<{
+  'update:modelValue': [value: boolean]
 }>()
 
 const drawingCharacters = ref<Character[]>([])
@@ -31,6 +36,8 @@ const drawingCharactersIds = computed(() => {
 watch(
   () => props.actualCharacter,
   () => {
+    emit('update:modelValue', false)
+
     setDrawingCharacters()
     setActualCharacterToDrawingCharacters()
     setPositions()
@@ -40,11 +47,16 @@ watch(
       return { transform: `translateY(${transform[position]}px)` }
     })
 
-    nextTick(() => {
-      charactersElement.value?.animate(keyframes, {
+    nextTick(async () => {
+      if (!charactersElement.value) return
+
+      const animation = charactersElement.value.animate(keyframes, {
         duration: 2500,
         fill: 'both'
       })
+      await animation.finished
+
+      emit('update:modelValue', true)
     })
   },
   { immediate: true }

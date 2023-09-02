@@ -12,6 +12,7 @@ const characters: Character[] = charactersData.ranczo
 const charactersRanking = ref<(Character | null)[]>(new Array(gameRounds).fill(null))
 const actualCharacter = ref<Character | null>(null)
 const isGameStarted = ref(false)
+const isCharactersSelectable = ref(false)
 
 const charactersToDraw = computed(() => {
   const selectedCharactersId = charactersRanking.value
@@ -55,9 +56,10 @@ function endGame() {}
     <GameRanking
       v-if="isGameStarted"
       @select="selectCharacterPlace($event)"
-      v-bind="{ charactersRanking }"
+      v-bind="{ charactersRanking, isCharactersSelectable }"
     />
     <GameDrawnCharacter
+      v-model="isCharactersSelectable"
       v-if="actualCharacter && isGameStarted"
       v-bind="{ actualCharacter, characters }"
     />
