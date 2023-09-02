@@ -1,66 +1,134 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { computed, ref, watch, nextTick } from 'vue'
 import { Character } from '@/types/types'
+import { getRandomArrayIndex } from '@/helpers/getRandomArrayIndex'
+
+const DRAWING_CHARACTERS_COUNT = 11
+const DRAWING_STEPS_COUNT = 4
 
 const props = defineProps<{
-  drawnCharacter: Character
+  actualCharacter: Character
   characters: Character[]
 }>()
 
-const actualCharacter = ref<Character>(props.drawnCharacter)
+const drawingCharacters = ref<Character[]>([])
+const positions = ref<number[]>([])
+const charactersElement = ref<HTMLElement | null>(null)
+
+const notSelectedCharacters = computed(() => {
+  const characterWithoutActualCharacter = props.characters.filter(
+    (character) => character.id !== props.actualCharacter.id
+  )
+  return characterWithoutActualCharacter.filter(
+    (character) => !drawingCharactersIds.value.includes(character.id)
+  )
+})
+
+const drawingCharactersIds = computed(() => {
+  return drawingCharacters.value.map((character) => character?.id)
+})
 
 watch(
-  () => props.drawnCharacter,
+  () => props.actualCharacter,
   () => {
-    shuffle(props.characters)
-  }
+    setDrawingCharacters()
+    setActualCharacterToDrawingCharacters()
+    setPositions()
+
+    const transform = [450, 360, 270, 180, 90, 0, -90, -180, -270, -360, -450]
+    const keyframes = positions.value.map((position) => {
+      return { transform: `translateY(${transform[position]}px)` }
+    })
+
+    nextTick(() => {
+      charactersElement.value?.animate(keyframes, {
+        duration: 2500,
+        fill: 'both'
+      })
+    })
+  },
+  { immediate: true }
 )
 
-function shuffle(array: Character[]) {
-  const changesCount = 10
-  const intervalTime = 200
+function setDrawingCharacters() {
+  const newDrawingCharacters = []
+  for (let i = 0; i < DRAWING_CHARACTERS_COUNT - 1; i++) {
+    const randomCharacterIndex = getRandomArrayIndex(notSelectedCharacters.value)
+    const randomCharacter = notSelectedCharacters.value[randomCharacterIndex]
 
-  for (let i = 0; i < changesCount; i++) {
-    setTimeout(function () {
-      const randomCharacterIndex = Math.floor(Math.random() * array.length)
-      actualCharacter.value = array[randomCharacterIndex]
-    }, i * intervalTime)
-
-    setTimeout(function () {
-      actualCharacter.value = props.drawnCharacter
-    }, changesCount * intervalTime)
+    newDrawingCharacters.push(randomCharacter)
+    drawingCharacters.value.push(randomCharacter)
   }
+
+  drawingCharacters.value = newDrawingCharacters
+}
+
+function setActualCharacterToDrawingCharacters() {
+  const randomIndex = getRandomArrayIndex(drawingCharacters.value)
+
+  drawingCharacters.value = [
+    ...drawingCharacters.value.slice(0, randomIndex),
+    props.actualCharacter,
+    ...drawingCharacters.value.slice(randomIndex)
+  ]
+}
+
+function setPositions() {
+  const newPositions: number[] = []
+
+  for (let i = 0; i < DRAWING_STEPS_COUNT - 1; i++) {
+    const randomPosition = getRandomArrayIndex(
+      drawingCharactersIds.value.filter(
+        (id) => !newPositions?.includes(id) && id !== props.actualCharacter.id
+      )
+    )
+    newPositions.push(
+      drawingCharactersIds.value.indexOf(drawingCharactersIds.value[randomPosition])
+    )
+  }
+
+  const actualCharacterIndex = drawingCharactersIds.value.indexOf(props.actualCharacter.id)
+  newPositions.push(actualCharacterIndex)
+
+  positions.value = newPositions
 }
 </script>
 
 <template>
-  <Transition>
-    <img
-      :key="actualCharacter.id"
-      class="drawn-character"
-      :src="actualCharacter.img"
-      :alt="actualCharacter.name"
-    />
-  </Transition>
+  <div class="drawn-characters-container">
+    <div ref="charactersElement" class="drawn-characters">
+      <img
+        :key="character.id"
+        v-for="character in drawingCharacters"
+        class="drawn-character-img"
+        :src="character.img"
+        :alt="character.name"
+      />
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.drawn-character {
+.drawn-characters-container {
+  --img-height: 90px;
+  --img-width: 160px;
+
+  overflow: hidden;
   position: absolute;
   top: 10%;
   right: 5%;
-  width: 160px;
-  height: 90px;
+  width: var(--img-width);
+  height: var(--img-height);
+}
+.drawn-characters {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.drawn-character-img {
+  max-width: var(--img-width);
+  max-height: var(--img-height);
   object-fit: contain;
-}
-
-.v-enter-active,
-.v-leave-active {
-  transition: 0.1s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
 }
 </style>

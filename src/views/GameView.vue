@@ -59,7 +59,7 @@ function endGame() {}
     />
     <GameDrawnCharacter
       v-if="actualCharacter && isGameStarted"
-      v-bind="{ drawnCharacter: actualCharacter, characters }"
+      v-bind="{ actualCharacter, characters }"
     />
   </CameraStream>
 </template>
