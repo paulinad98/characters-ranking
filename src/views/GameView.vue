@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { Character } from '@/types/types'
-import CameraStream from '@/components/CameraStream.vue'
 import GameRanking from '@/components/GameRanking.vue'
 import GameStartButton from '@/components/GameStartButton.vue'
 import GameDrawnCharacter from '@/components/GameDrawnCharacter.vue'
+import AppButton from '../components/AppButton.vue'
 import charactersData from '@/assets/characters.json'
 
 const gameRounds = 10
@@ -26,7 +26,14 @@ const charactersToDraw = computed(() => {
   return charactersToDraw
 })
 
+const isGameEnded = computed(() => {
+  return charactersRanking.value.every((character) => !!character)
+})
+
 function startGame() {
+  isCharactersSelectable.value = false
+  actualCharacter.value = null
+  charactersRanking.value = new Array(gameRounds).fill(null)
   isGameStarted.value = true
   drawCharacter()
 }
@@ -34,10 +41,7 @@ function startGame() {
 function selectCharacterPlace(characterRankingIndex: number) {
   charactersRanking.value[characterRankingIndex] = actualCharacter.value
 
-  if (charactersRanking.value.every((character) => !!character)) {
-    endGame()
-    return
-  }
+  if (isGameEnded.value) return
 
   drawCharacter()
 }
@@ -46,13 +50,11 @@ function drawCharacter() {
   const randomCharacterIndex = Math.floor(Math.random() * charactersToDraw.value.length)
   actualCharacter.value = charactersToDraw.value[randomCharacterIndex]
 }
-
-function endGame() {}
 </script>
 
 <template>
-  <CameraStream>
-    <GameStartButton v-if="!isGameStarted" @start="startGame()" />
+  <main class="game-background">
+    <GameStartButton @click="startGame()" v-if="!isGameStarted" />
     <GameRanking
       v-if="isGameStarted"
       @select="selectCharacterPlace($event)"
@@ -63,7 +65,24 @@ function endGame() {}
       v-if="actualCharacter && isGameStarted"
       v-bind="{ actualCharacter, characters }"
     />
-  </CameraStream>
+    <AppButton v-if="isGameEnded" @click="startGame()" color="raspberry-rose" class="reset-btn">
+      Zacznij od nowa
+    </AppButton>
+  </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.game-background {
+  position: relative;
+  height: 100vh;
+  background-color: rgb(var(--ash-gray-rgb));
+}
+.reset-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12%;
+  margin: auto;
+  width: max-content;
+}
+</style>
