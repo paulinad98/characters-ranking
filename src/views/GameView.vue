@@ -74,7 +74,7 @@ function drawCharacter() {
 <style scoped>
 .game-background {
   position: relative;
-  height: 100vh;
+  height: 100svh;
   background-color: rgb(var(--ash-gray-rgb));
 }
 .reset-btn {
