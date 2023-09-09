@@ -13,7 +13,7 @@
     {
       "id": 3,
       "name": "Kusy",
-      "img": "https://s3.party.pl/newsy/pawel-krolikowski-jako-kusy-w-ranczu-535961-1_X.jpg"
+      "img": "https://1.bp.blogspot.com/-CO_QinDifjo/YDQQvmuQJAI/AAAAAAAAG1o/L_8Kp3rgYsUuDWpe0MmGZx1XlhO1xpIvgCLcBGAsYHQ/w1200-h630-p-k-no-nu/40-001.jpg"
     },
     {
       "id": 4,
@@ -23,7 +23,7 @@
     {
       "id": 5,
       "name": "Patryk Pietrek",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/9/9f/62-12.jpg"
+      "img": "https://i.ytimg.com/vi/4bJ5c7M_Bl0/maxresdefault.jpg"
     },
     {
       "id": 6,
@@ -48,7 +48,7 @@
     {
       "id": 10,
       "name": "Stacho Japycz",
-      "img": "https://s3.party.pl/newsy/franciszek-pieczka-jako-stach-japycz-w-serialu-ranczo-555021-16_9.jpg"
+      "img": "https://static.wikia.nocookie.net/ranczo/images/7/7c/S9-18.jpg"
     },
     {
       "id": 11,
@@ -63,7 +63,7 @@
     {
       "id": 13,
       "name": "Wioletka Kotecka",
-      "img": "https://bi.im-g.pl/im/b2/fb/1b/z29343666Q,Magdalena-Waligorska-Lisiecka.jpg"
+      "img": "https://bi.im-g.pl/im/c9/e2/1b/z29241033V,Wioletta-Kotecka--Ranczo-.jpg"
     },
     {
       "id": 14,
@@ -88,22 +88,22 @@
     {
       "id": 18,
       "name": "Andrzej Więcławski",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/9/9a/Andrzej_Wi%C4%99c%C5%82awski00.png"
+      "img": "https://samequizy.pl/wp-content/uploads/2017/07/filing_images_eab59e811854.jpg"
     },
     {
       "id": 19,
       "name": "Stasiek Kotecki",
-      "img": "https://fwcdn.pl/fph/56/97/855697/994157.3.jpg"
+      "img": "https://obcas.pl/wp-content/uploads/2021/06/stasiek-z-serialu-ranczo-1024x631.jpg"
     },
     {
       "id": 20,
       "name": "Mieczysław Wezół",
-      "img": "https://static.wikia.nocookie.net/ranczo/images/5/53/59-5.jpg"
+      "img": "https://i.ytimg.com/vi/UW-1ps1yAi4/maxresdefault.jpg"
     },
     {
       "id": 21,
       "name": "Celina Hadziukowa",
-      "img": "https://bi.im-g.pl/im/9e/27/1b/z28471454V,Dorota-Nowakowska.jpg"
+      "img": "https://s3.viva.pl/newsy/dorota-nowakowska-plan-zdjeciowy-serialu-ranczo-21072007-672054-GALLERY_600.jpg"
     },
     {
       "id": 22,
@@ -179,6 +179,56 @@
       "id": 36,
       "name": "Jeff ",
       "img": "https://images.iberion.media/images/origin/Jeff_Butcher_w_serialu_Ranczo_wcielil_sie_w_Jerry_ego_1_c8f25d9d57.png"
+    },
+    {
+      "id": 37,
+      "name": "Marianek ",
+      "img": "https://skene.pl/media/cache/person_main/1991/pic/100521150459.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Jagna ",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/3/3d/Jagna.png"
+    },
+    {
+      "id": 39,
+      "name": "Janek Solejuk ",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/7/7c/Jan_Solejuk.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Szymek Solejuk ",
+      "img": "https://s3.viva.pl/newsy/maciej-cempura-ranczo-625043-GALLERY_BIG.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Kasia Solejuk ",
+      "img": "https://bi.im-g.pl/im/f5/e6/1a/z28208629IER,Anna-Stepien-jako-Kaska-Solejuk.jpg"
+    },
+    {
+      "id": 42,
+      "name": "Ola ",
+      "img": "https://samequizy.pl/wp-content/uploads/2018/07/filing_images_668f98f55515.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Myćko ",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/7/76/Mycko.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Wargacz ",
+      "img": "https://static1.personality-database.com/profile_images/a893dbcc95714e6f9a57e995d8b96f50.png"
+    },
+    {
+      "id": 45,
+      "name": "Weronika Więcławska ",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/b/bc/Weronika_Wi%C4%99c%C5%82awska1.jpg"
+    },
+    {
+      "id": 46,
+      "name": "Karat ",
+      "img": "https://static.wikia.nocookie.net/ranczo/images/4/4e/Marek_Karat.jpg/"
     }
   ]
 }
